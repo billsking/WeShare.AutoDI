@@ -5,3 +5,5 @@
 *.suo
 *.sqlite
 /.vs
+**/obj
+**/bin

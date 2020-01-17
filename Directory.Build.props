@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <MicrosoftExtensionsVersion>2.1.0</MicrosoftExtensionsVersion>
+    <MicrosoftExtensionsVersionV3>3.1.1</MicrosoftExtensionsVersionV3>
+  </PropertyGroup>
+</Project>

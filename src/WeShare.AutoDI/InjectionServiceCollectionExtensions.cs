@@ -17,7 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         public static IServiceCollection AutoDI(this IServiceCollection services, params Assembly[] assemblies)
         {
-            return services.AutoDI(typeof(IAutoDIable));
+            return services.AutoDI(typeof(IAutoDIable),assemblies);
         }
         /// <summary>
         /// 继承自定义泛型接口自动注入。
@@ -87,7 +87,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         public static IServiceCollection AutoDI<T>(this IServiceCollection services, params Assembly[] assemblies)
         {
-            return services.AutoDI(typeof(T));
+            return services.AutoDI(typeof(T), assemblies);
         }
     }
 }

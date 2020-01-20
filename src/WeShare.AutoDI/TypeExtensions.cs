@@ -29,12 +29,12 @@ namespace Microsoft.Extensions.DependencyInjection
                     }
                     else
                     {
-                        var path = dll.ResolveReferencePaths();
-                        if (path.Any())
+                        var paths = dll.ResolveReferencePaths();
+                        foreach (var path in paths)
                         {
                             try
                             {
-                                var ass = AssemblyLoadContext.Default.LoadFromAssemblyPath(path.First());
+                                var ass = AssemblyLoadContext.Default.LoadFromAssemblyPath(path);
                                 list.Add(ass);
                             }
                             catch (Exception e)
